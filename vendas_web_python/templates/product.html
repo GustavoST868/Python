@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--importing files-->
+    <!--importing javascript-->
+    <script src="{{ url_for('static', filename='js/product.js') }}"></script>
+    <!--importing css-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/product.css') }}">
+    <!--importing icon-->
+    <link rel="icon" href="{{ url_for('static', filename='icons/product.png') }}" type="image/PNG">
+    <title>Produtos</title>
+</head>
+<body>
+    <header>
+      <!--return to home pafe-->
+      <a href="{{ url_for('index') }}">Virtual Store</a>
+      <!--structure for searching product-->
+      <div class="search-container">
+        <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Pesquisar produtos...">
+      </div>
+    </header>
+    <!--where the list of products will be shown-->
+      <div id="productList">
+      </div>
+   </div>
+</body>
+</html>

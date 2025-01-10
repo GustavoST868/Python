@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--importing javascript-->
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+    <!--importing css-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+    <!--importing icon-->
+    <link rel="icon" href="{{ url_for('static', filename='icons/login.png') }}" type="image/png">
+    <title>Login</title>
+</head>
+<body>
+    <!--login box structure-->
+    <div class="login_box">
+        <form action="" method="post">
+            <!--user-->
+            <div class="input-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <!--password-->
+            <div class="input-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <!--button enter-->
+            <button type="submit">Entrar</button>
+    
+            <div class="register-link">
+                <p> <a href="{{ url_for('register') }}">Cadastrar</a></p>
+            </div>
+            <!--show an error message if user is not identified-->
+            <div class="forgot-password">
+                {% if error_message %}
+                 <p style="color: red;">{{ error_message }}</p>
+                {% endif %}
+                <!--redirects to home page-->
+                <p><a href="{{ url_for('index') }}">Voltar</a></p>
+            </div>
+        </form>
+    </div>
+    
+    </body>
+</html>

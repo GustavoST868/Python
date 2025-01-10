@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--importing files-->
+    <!--importing javascript-->
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <!--importing css-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
+    <!--importing icon-->
+    <link rel="icon" href="{{ url_for('static', filename='icons/box.png') }}" type="image/png">
+    <title>Virtual Store</title>
+</head>
+<body>
+    <header>
+        <!--import the user icon-->
+        <div class="icon_user" id="user-icon">
+            <img src="{{ url_for('static', filename='icons/user_icon.png') }}" alt="">
+        </div>
+
+        <h1>Virtual Store</h1>
+        <!--importing the icons and place them as a link reference-->
+        <div class="social">
+            <div class="one">
+                <a href="https://www.facebook.com/?stype=lo&deoia=1&jlou=Afc-Qs_uCCdK63Lk4PYgEmi4N-zR702UP6a28E_6NxCwdJCjyiah5HS2F3U6LFB2b7BLUL2syXjkfHwYxoNnbo4RYXE01BkYTa_smY2M50YBeA&smuh=34366&lh=Ac-4UnRLh8_N_o1DlyI"><img src="{{ url_for('static', filename='icons/facebook.png') }}" alt=""></a>
+            </div>
+            <div class="two">
+                <a href="https://www.instagram.com/"><img src="{{ url_for('static', filename='icons/instagram.png') }}" alt=""></a>
+            </div>
+            <div class="three">
+                <a href="https://web.whatsapp.com/"><img src="{{ url_for('static', filename='icons/whatsapp.png') }}" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <!--box structure with text inside-->
+    <div class="first_block"><p>Bem-vindo à Virtual Store, sua loja virtual favorita! Explore nossa seleção única de produtos de alta qualidade. Desfrute de ofertas exclusivas, uma navegação intuitiva e uma equipe de suporte dedicada. Faça parte da nossa comunidade de clientes satisfeitos. Compre com confiança, segurança e estilo na Virtual Store. Sua jornada de compras extraordinária começa aqui!</p></div>
+    <!--box structure with text and image inside-->
+    <div class="second_block">
+        <p>Sorria conosco, a alegria é contagiante!</p>
+        <img src="{{ url_for('static', filename='img/img.png') }}" alt="" >
+    </div>
+     
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!-- templates/pesquisa_resultado.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--conecta os arquivos de icones e estilizacao-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/resultado.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='icons/procurar.png') }}" type="image/png">
+    <title>Resultados da Pesquisa</title>
+</head>
+<body>
+    <h1></h1><!--local para mostrar os dads -->
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>CPF</th>
+            <th>Telefone</th>
+            <th>Data</th>
+            <th>Quantidade de Pessoas</th>
+        </tr>
+        {% for dado in dados %}
+        <tr>
+            <td>{{ dado[0] }}</td>
+            <td>{{ dado[1] }}</td>
+            <td>{{ dado[2] }}</td>
+            <td>{{ dado[3] }}</td>
+            <td>{{ dado[4] }}</td>
+            <td>{{ dado[5] }}</td>
+            <td>{{ dado[6] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{ url_for('pesquisar_dados') }}">Nova Pesquisa</a><!--link para a pagina de pesquisa-->
+    <br>
+    <a href="{{ url_for('todos_os_dados') }}">Ver Todas as Reservas</a><!--link para a pagina de mostrar os dados do banco-->
+</body>
+</html>
